@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xmlns:aop="http://www.springframework.org/schema/aop"
+	     xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	
+	<!-- 首页处理action -->
+	<bean name="/index" class="com.test.file.action.IndexAction" scope="prototype">
+		<property name="clientDao" ref="clientDao"/>
+		<property name="client" ref="client"/>
+	</bean>
+	
+	<!-- 用户注册action -->
+	<bean name="/registing" class="com.test.file.action.RegisterAction" scope="prototype">
+		<property name="clientDao" ref="clientDao"/>
+		<property name="client" ref="client"/>
+		<property name="fileSpaceDao" ref="fileSpaceDao"/>
+		<property name="fileSpace" ref="fileSpace"/>
+	</bean>
+	
+	<!-- 用户登录action -->
+	<bean name="/login" class="com.test.file.action.LoginAction" scope="prototype">
+		<property name="clientDao" ref="clientDao"/>
+		<property name="client" ref="client"/>
+	</bean>
+	
+	<!-- 用户登录action -->
+	<bean name="/logout" class="com.test.file.action.LogoutAction" scope="prototype"/>
+	
+	<!-- 用户信息修改action -->
+	<bean name="/modifyuser" class="com.test.file.action.ModifyUserAction" scope="prototype">
+		<property name="clientDao" ref="clientDao"/>
+		<property name="client" ref="client"/>
+	</bean>
+	
+	<!-- 用户备忘录创建action -->
+	<bean name="/createtremind" class="com.test.file.action.CreateTremindAction" scope="prototype">
+		<property name="tremindDao" ref="tremindDao"/>
+		<property name="tremind" ref="tremind"/>
+		<property name="client" ref="client"/>
+	</bean>
+	
+	<!-- 用户备忘录查询action -->
+	<bean name="/listtremind" class="com.test.file.action.QueryTremindAction" scope="prototype">
+		<property name="clientDao" ref="clientDao"/>
+		<property name="tremindDao" ref="tremindDao"/>
+		<property name="tremind" ref="tremind"/>
+		<property name="client" ref="client"/>
+	</bean>
+	
+	<!-- 用户消息创建action -->
+	<bean name="/createmessage" class="com.test.file.action.CreateMessageAction" scope="prototype">
+		<property name="messageDao" ref="messageDao"/>
+		<property name="message" ref="message"/>
+		<property name="clientDao" ref="clientDao"/>
+		<property name="client" ref="client"/>
+	</bean>
+	
+	<!-- 用户消息接收action -->
+	<bean name="/sendlist" class="com.test.file.action.QueryMessageAction" scope="prototype">
+		<property name="messageDao" ref="messageDao"/>
+		<property name="client" ref="client"/>
+	</bean>
+	
+	<!-- 用户接收消息查询action -->
+	<bean name="/recivelist" class="com.test.file.action.ReciveMsgAction" scope="prototype">
+		<property name="messageDao" ref="messageDao"/>
+		<property name="client" ref="client"/>
+	</bean>
+	
+	<!-- 用户查询action -->
+	<bean name="/moreclient" class="com.test.file.action.MoreClientAction" scope="prototype">
+		<property name="clientDao" ref="clientDao"/>
+	</bean>
+	
+	<!-- 用户进入文件空间action -->
+	<bean name="/file" class="com.test.file.action.FileSpaceAction" scope="prototype">
+		<property name="client" ref="client"/>
+		<property name="fileSpaceDao" ref="fileSpaceDao"/>
+		<property name="fileSpace" ref="fileSpace"/>
+	</bean>
+	
+	<!-- 用户文件上传action -->
+	<bean name="/uploading" class="com.test.file.action.UploadAction" scope="prototype">
+		<property name="client" ref="client"/>
+		<property name="fileSpaceDao" ref="fileSpaceDao"/>
+		<property name="fileSpace" ref="fileSpace"/>
+		<property name="clientFileDao" ref="clientFileDao"/>
+		<property name="file" ref="file"/>
+	</bean>
+	
+	<!-- 用户文件上传action -->
+	<bean name="/filelist" class="com.test.file.action.FileListAction" scope="prototype">
+		<property name="client" ref="client"/>
+		<property name="clientFileDao" ref="clientFileDao"/>
+	</bean>
+	
+	<!-- 用户文件共享action -->
+	<bean name="/share" class="com.test.file.action.FileShareAction" scope="prototype">
+		<property name="clientFileDao" ref="clientFileDao"/>
+		<property name="file" ref="file"/>
+	</bean>
+	
+	<!-- 用户文件撤销共享action -->
+	<bean name="/unshare" class="com.test.file.action.FileUNShareAction" scope="prototype">
+		<property name="clientFileDao" ref="clientFileDao"/>
+		<property name="file" ref="file"/>
+	</bean>
+	
+	<!-- 用户文件共享列表action -->
+	<bean name="/sharefile" class="com.test.file.action.FSListAction" scope="prototype">
+		<property name="clientFileDao" ref="clientFileDao"/>
+	</bean>
+	
+</beans>

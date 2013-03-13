@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans>
+  	
+  	<!-- 用户ActionForm -->
+  	<form-bean name="clientForm" type="com.test.file.form.ClientForm"/>
+  	
+  	<!-- 备忘录ActionForm -->
+  	<form-bean name="clientTremindForm" type="com.test.file.form.ClientTremindForm"/>
+  	
+  	<!-- 消息ActionForm -->
+  	<form-bean name="clientMessageForm" type="com.test.file.form.ClientMessageForm"/>
+  
+  	<!-- 上传文件ActionForm -->
+  	<form-bean name="uploadForm" type="com.test.file.form.UploadForm"/>
+  	
+  	<!-- 文件ActionForm -->
+  	<form-bean name="clientFileForm" type="com.test.file.form.ClientFileForm"/>
+  	
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+  
+  	<!-- 首页处理Action -->
+	<action path="/index"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			scope="request">
+		<forward name="success" path="/index.jsp" />
+		<forward name="failure" path="/failure.jsp"/>
+	</action>
+  	
+  	<!-- 索引页面注册跳转Action -->
+  	<action path="/register" forward="/register.jsp"/>
+  	
+  	<!-- 用户注册处理Action -->
+	<action path="/registing"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="clientForm"
+			scope="request">
+		<forward name="success" path="/success.jsp" />
+		<forward name="failure" path="/failure.jsp"/>
+	</action>
+	
+	<!-- 用户登录处理Action -->
+	<action path="/login"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="clientForm"
+			scope="request">
+		<forward name="success" path="/index.do"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 用户注销处理Action -->
+	<action path="/logout"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			scope="request">
+		<forward name="success" path="/index.do"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 用户信息修改处理Action -->
+	<action path="/modifyuser"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="clientForm"
+			scope="request">
+		<forward name="success" path="/success.jsp"/>
+		<forward name="failure" path="/failure.jsp"/>
+	</action>
+	
+	<!-- 备忘录创建action -->
+	<action path="/createtremind"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="clientTremindForm"
+			scope="request">
+		<forward name="success" path="/success.jsp"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 备忘录列表action -->
+	<action path="/listtremind"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			scope="request">
+		<forward name="success" path="/listtremind.jsp"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 消息创建处理action -->
+	<action path="/createmessage"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="clientMessageForm"
+			scope="request">
+		<forward name="success" path="/sendlist.do"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 消息查询处理action -->
+	<action path="/sendlist"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			scope="request">
+		<forward name="success" path="/sendlist.jsp"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 消息接收处理action -->
+	<action path="/recivelist"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			scope="request">
+		<forward name="success" path="/recivelist.jsp"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 用户列表处理action -->
+	<action path="/moreclient"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			scope="request">
+		<forward name="success" path="/clientlist.jsp"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 用户进入文件空间处理action -->
+	<action path="/file"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			scope="request">
+		<forward name="success" path="/filespace.jsp"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 用户文件上传处理action -->
+	<action path="/uploading"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="uploadForm"
+			scope="request">
+		<forward name="success" path="/success.jsp"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 用户文件上传列表处理action -->
+	<action path="/filelist"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			scope="request">
+		<forward name="success" path="/filelist.jsp"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+	<!-- 用户文件共享处理action -->
+	<action path="/share"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="clientFileForm"
+			scope="request">
+		<forward name="success" path="/filelist.do"/>
+	</action>
+	
+	<!-- 用户文件撤销共享处理action -->
+	<action path="/unshare"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="clientFileForm"
+			scope="request">
+		<forward name="success" path="/filelist.do"/>
+	</action>
+	
+	<!-- 用户文件共享列表处理action -->
+	<action path="/sharefile"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			scope="request">
+		<forward name="success" path="/filesharelist.jsp"/>
+		<forward name="failure" path="/failure.jsp"/>	
+	</action>
+	
+  </action-mappings>
+  <controller maxFileSize="10M"/>
+  <message-resources parameter="com.test.file.ApplicationResources" />
+</struts-config>
+

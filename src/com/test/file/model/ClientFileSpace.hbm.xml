@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.test.file.model">
+	<class name="ClientFileSpace">
+		<id name="spaceid">
+			<generator class="native"/>
+		</id>
+		<property name="filespace"/>
+		<property name="fileexist"/>
+		<property name="filecount"/>
+		
+		<many-to-one name="client" column="userid" unique="true"/>
+		
+	</class>
+</hibernate-mapping>

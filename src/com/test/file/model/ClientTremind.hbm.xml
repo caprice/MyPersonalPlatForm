@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.test.file.model">
+	<class name="ClientTremind">
+		<id name="tremindid">
+			<generator class="native"/>
+		</id>
+		<property name="theme"/>
+		<property name="content"/>
+		<property name="makeDate"/>
+		
+		<many-to-one name="client" column="userid"/>
+		
+	</class>
+</hibernate-mapping>

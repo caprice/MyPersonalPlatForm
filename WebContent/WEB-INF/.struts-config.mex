@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/index.do" location="50,950" dimension="358,84" />
+  <StrutsActivity path="/register.do" location="350,250" dimension="100,60" />
+  <StrutsActivity path="/registing.do" location="650,350" dimension="358,84" />
+  <StrutsActivity path="/login.do" location="50,450" dimension="358,84" />
+  <StrutsActivity path="/logout.do" location="650,550" dimension="358,84" />
+  <StrutsActivity path="/modifyuser.do" location="50,650" dimension="112,60" />
+  <StrutsActivity path="/createtremind.do" location="350,750" dimension="358,84" />
+  <StrutsActivity path="/listtremind.do" location="950,750" dimension="358,84" />
+  <StrutsActivity path="/createmessage.do" location="650,950" dimension="358,84" />
+  <StrutsActivity path="/sendlist.do" location="50,1350" dimension="358,84" />
+  <StrutsActivity path="/recivelist.do" location="350,1150" dimension="358,84" />
+  <StrutsActivity path="/moreclient.do" location="950,1150" dimension="358,84" />
+  <StrutsActivity path="/file.do" location="650,1350" dimension="358,84" />
+  <StrutsActivity path="/uploading.do" location="50,1550" dimension="358,84" />
+  <StrutsActivity path="/filelist.do" location="1250,450" dimension="358,84" />
+  <StrutsActivity path="/share.do" location="1250,950" dimension="358,84" />
+  <StrutsActivity path="/unshare.do" location="1250,1350" dimension="358,84" />
+  <StrutsActivity path="/index.jsp" location="950,250" dimension="100,48" />
+  <StrutsActivity path="/failure.jsp" location="50,250" dimension="112,48" />
+  <StrutsActivity path="/register.jsp" location="650,250" dimension="118,48" />
+  <StrutsActivity path="/success.jsp" location="950,150" dimension="112,48" />
+  <StrutsActivity path="/listtremind.jsp" location="50,350" dimension="136,48" />
+  <StrutsActivity path="/sendlist.jsp" location="350,650" dimension="118,48" />
+  <StrutsActivity path="/recivelist.jsp" location="50,850" dimension="130,48" />
+  <StrutsActivity path="/clientlist.jsp" location="650,1550" dimension="130,48" />
+  <StrutsActivity path="/filespace.jsp" location="50,1150" dimension="124,48" />
+  <StrutsActivity path="/filelist.jsp" location="1250,650" dimension="118,48" />
+  <StrutsActivity path="/registe.jsp" location="950,50" dimension="112,48" />
+  <StrutsActivity path="/sharefile.do" location="950,1550" dimension="358,84" />
+  <StrutsActivity path="/filesharelist.jsp" location="50,1250" dimension="148,48" />
+  <StrutsTransition id="/modifyuser.do,success,/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="106,650" />
+      <AbsolutePoint location="106,565" />
+      <AbsolutePoint location="633,565" />
+      <AbsolutePoint location="633,213" />
+      <AbsolutePoint location="1006,213" />
+      <AbsolutePoint location="1006,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/registing.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,383" />
+      <AbsolutePoint location="261,383" />
+      <AbsolutePoint location="261,296" />
+      <AbsolutePoint location="162,296" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/createtremind.do,success,/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="529,750" />
+      <AbsolutePoint location="529,495" />
+      <AbsolutePoint location="1197,495" />
+      <AbsolutePoint location="1197,174" />
+      <AbsolutePoint location="1062,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/registing.do,success,/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,350" />
+      <AbsolutePoint location="829,193" />
+      <AbsolutePoint location="950,193" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/modifyuser.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,680" />
+      <AbsolutePoint location="5,680" />
+      <AbsolutePoint location="5,213" />
+      <AbsolutePoint location="76,213" />
+      <AbsolutePoint location="76,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,450" />
+      <AbsolutePoint location="229,-25" />
+      <AbsolutePoint location="136,-25" />
+      <AbsolutePoint location="136,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sharefile.do,success,/filesharelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1159,1550" />
+      <AbsolutePoint location="1159,1259" />
+      <AbsolutePoint location="198,1259" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/recivelist.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,1229" />
+      <AbsolutePoint location="27,1229" />
+      <AbsolutePoint location="27,171" />
+      <AbsolutePoint location="106,171" />
+      <AbsolutePoint location="106,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sendlist.do,success,/sendlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1362" />
+      <AbsolutePoint location="-160,1362" />
+      <AbsolutePoint location="-160,413" />
+      <AbsolutePoint location="423,413" />
+      <AbsolutePoint location="423,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,992" />
+      <AbsolutePoint location="-25,992" />
+      <AbsolutePoint location="-25,274" />
+      <AbsolutePoint location="50,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/file.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1008,1392" />
+      <AbsolutePoint location="1733,1392" />
+      <AbsolutePoint location="1733,441" />
+      <AbsolutePoint location="317,441" />
+      <AbsolutePoint location="317,274" />
+      <AbsolutePoint location="162,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/createmessage.do,success,/sendlist.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,1034" />
+      <AbsolutePoint location="829,1289" />
+      <AbsolutePoint location="229,1289" />
+      <AbsolutePoint location="229,1350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/register.do,null,/register.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="450,280" />
+      <AbsolutePoint location="650,280" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/download.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1810" />
+      <AbsolutePoint location="-215,1810" />
+      <AbsolutePoint location="-215,343" />
+      <AbsolutePoint location="124,343" />
+      <AbsolutePoint location="124,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/moreclient.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1308,1192" />
+      <AbsolutePoint location="1643,1192" />
+      <AbsolutePoint location="1643,-172" />
+      <AbsolutePoint location="54,-172" />
+      <AbsolutePoint location="54,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sharefile.do,success,/filelist.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1308,1592" />
+      <AbsolutePoint location="1823,1592" />
+      <AbsolutePoint location="1823,492" />
+      <AbsolutePoint location="1608,492" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/moreclient.do,success,/clientlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1129,1234" />
+      <AbsolutePoint location="1129,1479" />
+      <AbsolutePoint location="715,1479" />
+      <AbsolutePoint location="715,1550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/uploading.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1614" />
+      <AbsolutePoint location="-275,1614" />
+      <AbsolutePoint location="-275,125" />
+      <AbsolutePoint location="267,125" />
+      <AbsolutePoint location="267,252" />
+      <AbsolutePoint location="162,252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/file.do,success,/filespace.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="799,1350" />
+      <AbsolutePoint location="799,1049" />
+      <AbsolutePoint location="112,1049" />
+      <AbsolutePoint location="112,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/filelist.do,success,/filelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1353,534" />
+      <AbsolutePoint location="1353,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,success,/index.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="199,534" />
+      <AbsolutePoint location="199,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/unshare.do,success,/filelist.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1429,492" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,success,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1034" />
+      <AbsolutePoint location="229,1109" />
+      <AbsolutePoint location="1683,1109" />
+      <AbsolutePoint location="1683,274" />
+      <AbsolutePoint location="1050,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sharefile.do,success,/filesharelist.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1129,1634" />
+      <AbsolutePoint location="1129,1686" />
+      <AbsolutePoint location="798,1686" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/createmessage.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,950" />
+      <AbsolutePoint location="829,731" />
+      <AbsolutePoint location="41,731" />
+      <AbsolutePoint location="41,296" />
+      <AbsolutePoint location="50,296" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logout.do,success,/index.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,622" />
+      <AbsolutePoint location="229,622" />
+      <AbsolutePoint location="229,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/createtremind.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="499,750" />
+      <AbsolutePoint location="499,5" />
+      <AbsolutePoint location="158,5" />
+      <AbsolutePoint location="158,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/recivelist.do,success,/recivelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="529,1150" />
+      <AbsolutePoint location="529,895" />
+      <AbsolutePoint location="180,895" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/listtremind.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1129,834" />
+      <AbsolutePoint location="1129,1079" />
+      <AbsolutePoint location="-85,1079" />
+      <AbsolutePoint location="-85,325" />
+      <AbsolutePoint location="76,325" />
+      <AbsolutePoint location="76,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sharefile.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1308,1574" />
+      <AbsolutePoint location="1907,1574" />
+      <AbsolutePoint location="1907,-253" />
+      <AbsolutePoint location="204,-253" />
+      <AbsolutePoint location="204,256" />
+      <AbsolutePoint location="162,256" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/download.do,success,/filesharelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1792" />
+      <AbsolutePoint location="-425,1792" />
+      <AbsolutePoint location="-425,1274" />
+      <AbsolutePoint location="50,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/filelist.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1447,450" />
+      <AbsolutePoint location="1447,-132" />
+      <AbsolutePoint location="-25,-132" />
+      <AbsolutePoint location="-25,256" />
+      <AbsolutePoint location="50,256" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/uploading.do,success,/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1584" />
+      <AbsolutePoint location="-350,1584" />
+      <AbsolutePoint location="-350,65" />
+      <AbsolutePoint location="695,65" />
+      <AbsolutePoint location="695,125" />
+      <AbsolutePoint location="1006,125" />
+      <AbsolutePoint location="1006,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/share.do,success,/filelist.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1429,950" />
+      <AbsolutePoint location="1429,534" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sendlist.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1392" />
+      <AbsolutePoint location="-49,1392" />
+      <AbsolutePoint location="-49,252" />
+      <AbsolutePoint location="50,252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logout.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,592" />
+      <AbsolutePoint location="573,592" />
+      <AbsolutePoint location="573,325" />
+      <AbsolutePoint location="106,325" />
+      <AbsolutePoint location="106,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/listtremind.do,success,/listtremind.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1129,750" />
+      <AbsolutePoint location="1129,-85" />
+      <AbsolutePoint location="180,-85" />
+      <AbsolutePoint location="180,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
